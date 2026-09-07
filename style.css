@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.tarjeta {
+    width: 700px;
+    margin: 5px auto;
+    padding: 100px;
+    background-color: rgb(214, 32, 32);
+    text-align: center;
+    border-radius: 15px;
+}
+.tarjetaE {
+    width: 500px;
+    margin: 5px auto;
+    padding: 40px;
+    background-color: rgb(36, 20, 107);
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.tarjetaArreglo {
+    width: 500px;
+    margin: 5px auto;
+    padding: 40px;
+    background-color: rgb(4, 103, 168);
+    text-align: center;
+    border-radius: 15px;
+}
+
+.tarjetaFiltrar {
+    width: 500px;
+    margin: 5px auto;
+    padding: 40px;
+    background-color: rgba(4, 95, 24, 0.342);
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+h1 {
+    color: #0b22d2;
+}
+
+h2 {
+    color: #555;
+}

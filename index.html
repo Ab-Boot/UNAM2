@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi presentación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tarjeta">
+        <h1>BASS MOTOS </h1>
+
+        <p>
+            Sistema que ayuda con el registro de clientes y servicios 
+            para una mejor optimizacion de personal y evitar entregas tardias.
+        </p>
+
+       <ul>Servicio basico (aceite,bujia,filtro)</ul>
+       <ul>servicio de barras</ul>  
+       <ul>servicio ajuste punterias</ul>  
+        <form>
+            <label>Nombre</label>
+            <input type="text"><br><br>
+
+
+            <label>Telefono</label>
+            <input type="tel"><br><br>
+
+            <label>Notas</label>
+            <textarea></textarea><br><br>
+
+            <button>"guardar cliente"</button>
+            
+            
+         </form>
+  
+
+    </div>
+    <div class="tarjetaE">
+          <table style="margin: auto;">
+    <tr>
+        <!-- colocar encabezados -->
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Estado</th>
+    </tr>
+
+    <tr>
+        <td>Juan Pérez</td>
+        <td>Laptop</td>
+        <td>Pendiente</td>
+    </tr>
+
+    <tr>
+        <td>María López</td>
+        <td>Teclado</td>
+        <td>En proceso</td>
+    </tr>
+
+    <tr>
+        <td>Carlos García</td>
+        <td>Monitor</td>
+        <td>Entregado</td>
+    </tr>
+    </table>
+    </div>
+    
+ 
+
+
+    <div class="tarjetaArreglo">
+
+        <table style="margin: auto;"></table>
+
+        <br><div id="resultado"></div> 
+
+        <script>
+const clientes = [
+  { nombre: "Ana López", telefono: "5512345678" },
+  { nombre: "Luis Pérez", telefono: "5587654321" }
+];
+ 
+let htmlARREGLO = "";
+clientes.forEach(function(c) {
+  htmlARREGLO += c.nombre + " - " + c.telefono + "<br>";
+});
+document.getElementById("resultado").innerHTML = htmlARREGLO;
+
+
+</script>
+    </div>
+
+    <div class="tarjetaFiltrar">
+        <table style="margin: auto;"></table>
+        <div id="resultado-pendientes"></div>
+ 
+<script>
+const pedidos = [
+  { cliente: "Ana López", estado: "Pendiente" },
+  { cliente: "Luis Pérez", estado: "Entregado" },
+  { cliente: "Karla Ruiz", estado: "Pendiente" }
+];
+ 
+const pendientes = pedidos.filter(function(p) {
+  return p.estado === "Pendiente";
+});
+ 
+let html = "";
+pendientes.forEach(function(p) {
+  html += p.cliente + " - " + p.estado + "<br>";
+});
+document.getElementById("resultado-pendientes").innerHTML = html;
+</script>
+
+        
+    </div>
+
+    <button onclick="marcarEntregado()">Marcar como entregado</button>
+<p id="mensaje">Estado: Pendiente</p>
+ 
+<script>
+function marcarEntregado() {
+  document.getElementById("mensaje").innerText = "Estado: Entregad0";
+}
+</script>
+
+</body>
+</html>
